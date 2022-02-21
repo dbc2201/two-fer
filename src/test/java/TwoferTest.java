@@ -1,5 +1,4 @@
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -15,31 +14,27 @@ public class TwoferTest {
 
     @Test
     public void noNameGiven() {
-        assertThat(twofer.twofer(null))
-                .isEqualTo("One for you, one for me.");
+        assertThat(twofer.twofer(null)).isEqualTo("One for you, one for me.");
     }
 
-    @Ignore("Remove to run test")
+
     @Test
     public void aNameGiven() {
-        assertThat(twofer.twofer("Alice"))
-                .isEqualTo("One for Alice, one for me.");
+        assertThat(twofer.twofer("Alice")).isEqualTo("One for Alice, one for me.");
     }
 
-    @Ignore("Remove to run test")
+
     @Test
     public void anotherNameGiven() {
-        assertThat(twofer.twofer("Bob"))
-                .isEqualTo("One for Bob, one for me.");
+        assertThat(twofer.twofer("Bob")).isEqualTo("One for Bob, one for me.");
     }
 
     /* Track specific */
 
-    @Ignore("Remove to run test")
+
     @Test
     public void emptyStringIsNotTheSameAsNull() {
-        assertThat(twofer.twofer(""))
-                .isEqualTo("One for , one for me.");
+        assertThat(twofer.twofer("")).isEqualTo("One for , one for me.");
     }
 
 }
